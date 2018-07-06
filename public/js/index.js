@@ -43,9 +43,9 @@ var socket = io();
        var locationButton = jQuery('#send-location');
        locationButton.on('click', function () {
         //    console.log(navigator.geolocation);
-           if(navigator.geolocation){
-               return alert(navigator.longitude);
-           }
+        //    if(navigator.geolocation){
+        //        return alert('GeoLocation not supported');
+        //    }
 
            navigator.geolocation.getCurrentPosition(function() {
                 console.log(Position);
