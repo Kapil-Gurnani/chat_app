@@ -48,11 +48,12 @@ var socket = io();
         //    }
 
            navigator.geolocation.getCurrentPosition(function() {
-                console.log(Position);
+                console.log(position);
                 socket.emit('createLocationMessage', {
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude
                 });
+                console.log(position.coords.latitude);
            }, function() {
                alert('Unable to fetch location');
            });
